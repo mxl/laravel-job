@@ -5,7 +5,7 @@ Laravel job tools:
 
 ## Installation
 ```bash
-$ composer require mxl/laravel-job:^0.0.1
+$ composer require mxl/laravel-job
 ```
 
 Laravel 5.5+ will use the [auto-discovery](https://medium.com/@taylorotwell/package-auto-discovery-in-laravel-5-5-ea9e3ab20518) feature to add `MichaelLedin\LaravelJob\LaravelJobServiceProvider::class` to providers.
