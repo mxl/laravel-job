@@ -1,0 +1,41 @@
+{
+    "name": "mxl/laravel-job",
+    "description": "Laravel job tools",
+    "keywords": [
+        "laravel",
+        "job",
+        "command",
+        "dispatch",
+        "tools"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/mxl/laravel-job",
+    "support": {
+        "issues": "https://github.com/mxl/laravel-job/issues",
+        "source": "https://github.com/mxl/laravel-job"
+    },
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": "^5.5"
+    },
+    "authors": [
+        {
+            "name": "Michael Ledin",
+            "email": "mledin89@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MichaelLedin\\LaravelJob\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MichaelLedin\\LaravelJob\\LaravelJobServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
