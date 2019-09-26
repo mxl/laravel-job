@@ -31,7 +31,7 @@ $ php artisan job:dispatch YourJob
 if `YourJob` class is located under `\App\Jobs` or specify full class name with namespace:
 
 ```bash
-$ php artisan job:dispatch \Path\To\YourJob
+$ php artisan job:dispatch '\Path\To\YourJob'
 ```
 
 ### Running jobs immediately

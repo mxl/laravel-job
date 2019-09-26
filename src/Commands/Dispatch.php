@@ -3,6 +3,7 @@
 namespace MichaelLedin\LaravelJob\Commands;
 
 use Illuminate\Queue\Jobs\Job;
+use InvalidArgumentException;
 use MichaelLedin\LaravelJob\FromParameters;
 
 class Dispatch extends Command
@@ -18,8 +19,12 @@ class Dispatch extends Command
     {
         /** @var Job|FromParameters $class */
         $class = $this->argument('job');
+        $defaultNamespace = '\\App\\Jobs\\';
         if (!class_exists($class)) {
-            $class = '\\App\\Jobs\\' . $class;
+            $class =  $defaultNamespace . $class;
+            if (!class_exists($class)) {
+                throw new InvalidArgumentException("$class and $defaultNamespace$class classes do not exist.");
+            }
         }
         $parameters = $this->argument('params') ?? [];
         $job = in_array(FromParameters::class, class_implements($class)) ? $class::fromParameters(...$parameters) : new $class(...$parameters);
