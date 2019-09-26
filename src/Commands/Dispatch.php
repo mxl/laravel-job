@@ -21,9 +21,10 @@ class Dispatch extends Command
         $class = $this->argument('job');
         $defaultNamespace = '\\App\\Jobs\\';
         if (!class_exists($class)) {
+            $oldClass = $class;
             $class =  $defaultNamespace . $class;
             if (!class_exists($class)) {
-                throw new InvalidArgumentException("$class and $defaultNamespace$class classes do not exist.");
+                throw new InvalidArgumentException("$oldClass and $class classes do not exist.");
             }
         }
         $parameters = $this->argument('params') ?? [];
