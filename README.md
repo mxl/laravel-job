@@ -1,4 +1,9 @@
 # laravel-job
+[![Current version](https://img.shields.io/packagist/v/mxl/laravel-job.svg?logo=composer)](https://packagist.org/packages/mxl/laravel-job)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/mxl/laravel-job.svg)](https://packagist.org/packages/mxl/laravel-job/stats)
+[![Total Downloads](https://img.shields.io/packagist/dt/mxl/laravel-job.svg)](https://packagist.org/packages/mxl/laravel-job/stats)
+[![Build Status](https://travis-ci.org/mxl/laravel-job.svg?branch=master)](https://travis-ci.org/mxl/laravel-job)
+
 Laravel job tools:
 - dispatch job from command line with parameters to queue or run synchronously;
 - `Job` base class with boilerplate.
@@ -120,6 +125,11 @@ To add parsing override `fromParameters` method.
 ## Maintainers
 
 - [@mxl](https://github.com/mxl)
+
+## Other useful Laravel packages from the author
+
+- [mxl/laravel-api-key](https://github.com/mxl/laravel-api-key) - API Key Authorization for Laravel with replay attack prevention;
+- [mxl/laravel-queue-rate-limit](https://github.com/mxl/laravel-queue-rate-limit) - simple Laravel queue rate limiting;
 
 ## License
 
