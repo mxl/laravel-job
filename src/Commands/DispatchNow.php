@@ -15,6 +15,6 @@ class DispatchNow extends Dispatch
 
     protected function dispatch($job)
     {
-        dispatch_now($job);
+        dispatch_sync($job);
     }
 }
